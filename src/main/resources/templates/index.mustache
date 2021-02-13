@@ -4,6 +4,16 @@
         <div class="row">
             <div class="col-md-6">
                 <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+                {{#userName}} <!--mustache는 if/else 를 제공하지 않음. true false만 있음. 따라서 mustache는 최종값만 줘야 함-->
+                    Logged in as : <span id="user">{{userName}}</span>
+                    <!--/logout 은 spring security에서 기본적으로 제공하는 로그아웃 url. Controller 생성할 필요 없음-->
+                    <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+                {{/userName}}
+                {{^userName}} <!--해당값이 존재하지 않는 경우 ^를 사용-->
+                    <!--/oauth2/authorization/google 은 spring security에서 기본적으로 제공하는 로그인 url-->
+                    <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+                    <a href="/oauth2/authorization/naver" class="btn btn-success active" role="button">Naver Login</a>
+                {{/userName}}
             </div>
         </div>
         <br>
