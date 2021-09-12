@@ -41,6 +41,7 @@ public class HelloControllerTest {
 
     }
 
+    /*
     @WithMockUser(roles="USER")
     @Test
     public void helloPost가_리턴된다() throws Exception{
@@ -50,6 +51,7 @@ public class HelloControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(helloPost));
     }
+    */
 
     @WithMockUser(roles="USER")
     @Test
