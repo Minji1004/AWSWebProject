@@ -5,17 +5,18 @@ import com.jojoldu.book.springboot.domain.posts.Posts;
 import com.jojoldu.book.springboot.domain.posts.PostsRepository;
 import com.jojoldu.book.springboot.web.dto.PostsSaveRequestDto;
 import com.jojoldu.book.springboot.web.dto.PostsUpdateRequestDto;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.*;
 
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.context.WebApplicationContext;
 
 //mock MVC
@@ -32,7 +33,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 //@WebMvcTest는 JPA 기능이 작동하지 않기 때문. JPA 기능까지 한꺼번에 테스트할 때는 SpringBootTest와  TestRestTemplate 사용.
 //WebMvcTest로 get, post 테스트할 수 있었음.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -47,7 +48,7 @@ public class PostsApiControllerTest {
     @Autowired
     private PostsRepository postsRepository;
 
-    @After
+    @AfterEach
     public void tearDown() throws Exception{
         postsRepository.deleteAll();
     }
@@ -59,7 +60,7 @@ public class PostsApiControllerTest {
 
     private MockMvc mvc;
 
-    @Before  //매번 테스트 시작되기 전에 MOckMVC 인스턴스를 생성
+    @BeforeEach//매번 테스트 시작되기 전에 MOckMVC 인스턴스를 생성
     public void setup(){
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)

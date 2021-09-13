@@ -1,18 +1,18 @@
 package com.jojoldu.book.springboot.domain.posts;
 
-import org.junit.After;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest //보통 @SpringBootTest 사용할 경우 H2 데이터베이스를 자동으로 실행해준다.
 public class PostsRepositoryTest {
 
@@ -22,7 +22,7 @@ public class PostsRepositoryTest {
     //@After
     // Junit에서 단위테스트가 끝날때마다 수행되는 메소드를 지정.
     // 배포 전 전체 테스트를 수행할 때 테스트간 데이터 침범을 막기 위해 사용
-    @After
+    @AfterEach
     public void cleanup(){
         postsRepository.deleteAll();
     }
