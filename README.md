@@ -26,9 +26,9 @@ Web 폴더 : URL 매핑 Controller와 View에 쓰이는 DTO 관리 폴더
                 Setter는 특별한 목적을 나타낼 수 있게끔 메소드명에 나타낸다. Ex) setUserName(X), updateUserName(O)
 
 <br>    
-Domain 폴더 : Entity와 Repository를 관리하는 폴더
+Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository)를 관리하는 폴더 
 
-     Entity 폴더 : 
+     Entity 폴더 : Entity 클래스와 Entity의 Repository 클래스는 기본적으로 함께 위치해야 한다. 
      - @NoArgsConstructor: 
 
 
