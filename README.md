@@ -30,7 +30,11 @@ Service 폴더: Controller에서 해당 Request에 맞는 Service의 메소드�
      
          Service 클래스: 비즈니스 처리 로직은 Service가 아니라 Domain인 Entity에서 한다. 
                          Service는 트랜잭션 Domain간 순서 보장의 역할만 한다.   
-
+                                                
+           - @RequiredArgsConstructor: final이 선언된 모든 필드를 인자값으로 하는 생성자 대신 생성.
+                                       롬복 설치 후 사용 가능
+                                       생성자 주입 방식이 아닌 Bean 주입 방식인 @Autowired는 추천하지 않는다.
+        
 
 <br>
 Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository)를 관리하는 폴더 
