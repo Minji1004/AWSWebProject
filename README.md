@@ -1,8 +1,8 @@
 # 스프링 부트와 AWS로 혼자 구현하는 웹 서비스
 
 이동욱 저자의 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 책을 따라 구현함   
-</br>
-</br>
+<br>
+<br>
 ## JAVA 폴더 내 Directory 구조와 설명
 
 Application 클래스: Application을 실행시키는 메인 클래스
@@ -25,4 +25,10 @@ Web 폴더 : URL 매핑 Controller와 View에 쓰이는 DTO 관리 폴더
                 Setter메소드 사용을 지양한다. 
                 Setter는 특별한 목적을 나타낼 수 있게끔 메소드명에 나타낸다. Ex) setUserName(X), updateUserName(O)
 
-Domain 폴더
+<br>    
+Domain 폴더 : Entity와 Repository를 관리하는 폴더
+
+     Entity 폴더 : 
+     - @NoArgsConstructor: 
+
+
