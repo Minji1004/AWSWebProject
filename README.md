@@ -16,6 +16,8 @@ Web 폴더 : URL 매핑 Controller와 View에 쓰이는 DTO 관리 폴더
      - @RestController: JSON을 반환하는 Controller를 만들어줌.Repository Layer에서 결과를 넘겨준 객체
                         Entity와 달리 View를 위한 클래스라 자주 변경 가능
                         Entity는 도메인 패키지에서 데이터베이스와 맞닿은 핵심 클래스이므로 Request/Response 클래스로 절대 사용하면 안된다.
+                        
+                        
      - @Getter: Getter메소드를 자동 생성. 롬복 설치 후 사용 가능하다.
                 Setter메소드 사용을 지양한다. 
                 Setter는 특별한 목적을 나타낼 수 있게끔 메소드명에 나타낸다. Ex) setUserName(X), updateUserName(O)
