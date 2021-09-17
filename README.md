@@ -24,6 +24,11 @@ Web 폴더 : URL 매핑 Controller와 View에 쓰이는 DTO 관리 폴더
      - @Getter: Getter메소드를 자동 생성. 롬복 설치 후 사용 가능하다.
 
 <br>    
+Service 폴더: Controller에서 해당 Request에 맞는 Service의 메소드를 호출한다.
+              비즈니스 처리 로직은 Service가 아니라 Domain인 Entity에서 한다.
+              Service는 트랜잭션 Domain간 순서 보장의 역할만 한다. 
+
+<br>
 Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository)를 관리하는 폴더 
 
      Entity 폴더 : Entity 클래스와 Entity의 Repository 클래스는 기본적으로 함께 위치해야 한다. 
@@ -31,7 +36,6 @@ Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository
          Entity 클래스: 도메인 패키지에서 데이터베이스와 맞닿은 핵심 클래스
                        절대 Setter 메소드를 만들지 않는다. 
                        명확히 그 목적과 의도를 나타낼 수 있는 메소드로 추가 Ex) setUserName(X), updateUserName(O) 
-                       <b>비즈니스 처리 로직은 Service가 아니라 Domain인 Entity에서 한다.</b>
                        
            - @NoArgsConstructor: 기본 생성자 자동 추가
            - @Builder: 해당 클래스의 빌더 패턴 클래스를 생성
