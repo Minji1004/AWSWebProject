@@ -24,8 +24,8 @@ Web 폴더 : URL 매핑 Controller와 View에 쓰이는 DTO 관리 폴더
      - @Getter: Getter메소드를 자동 생성. 롬복 설치 후 사용 가능하다.
 
 <br>    
-Service 폴더: Controller에서 해당 Request에 맞는 Service의 메소드를 호출한다.  
-              비즈니스 처리 로직은 Service가 아니라 Domain인 Entity에서 한다.  
+Service 폴더: Controller에서 해당 Request에 맞는 Service의 메소드를 호출한다.<br>
+              비즈니스 처리 로직은 Service가 아니라 Domain인 Entity에서 한다.<br>  
               Service는 트랜잭션 Domain간 순서 보장의 역할만 한다.   
 
 <br>
