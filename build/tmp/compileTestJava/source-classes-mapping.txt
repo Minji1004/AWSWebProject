@@ -8,3 +8,5 @@ com/jojoldu/book/springboot/web/HelloControllerTest.java
  com.jojoldu.book.springboot.web.HelloControllerTest
 com/jojoldu/book/springboot/web/IndexControllerTest.java
  com.jojoldu.book.springboot.web.IndexControllerTest
+com/jojoldu/book/springboot/web/ProfileControllerUnitTest.java
+ com.jojoldu.book.springboot.web.ProfileControllerUnitTest
