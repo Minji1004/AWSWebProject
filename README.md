@@ -22,13 +22,19 @@ Web 폴더 : URL 매핑 Controller와 View에 쓰이는 DTO 관리 폴더
                         
                         
      - @Getter: Getter메소드를 자동 생성. 롬복 설치 후 사용 가능하다.
-                Setter메소드 사용을 지양한다. 
-                Setter는 특별한 목적을 나타낼 수 있게끔 메소드명에 나타낸다. Ex) setUserName(X), updateUserName(O)
 
 <br>    
 Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository)를 관리하는 폴더 
 
      Entity 폴더 : Entity 클래스와 Entity의 Repository 클래스는 기본적으로 함께 위치해야 한다. 
-     - @NoArgsConstructor: 
+     
+         Entity 클래스: 도메인 패키지에서 데이터베이스와 맞닿은 핵심 클래스
+                       절대 Setter 메소드를 만들지 않는다. 
+                       명확히 그 목적과 의도를 나타낼 수 있는 메소드로 추가 Ex) setUserName(X), updateUserName(O) 
+                       
+           - @NoArgsConstructor: 기본 생성자 자동 추가
+           - @Builder: 해당 클래스의 빌더 패턴 클래스를 생성
+     
+         Repository 클래스: 데이터 저장소에 접근하는 영역. 기존의 DAO로 이해하면 된다.       
 
 
