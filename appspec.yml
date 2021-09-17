@@ -26,10 +26,3 @@ hooks:
     - location: health.sh
       timeout: 60
       runas: ec2-user
-
-
-# step2 용도 (무중단 배포 없음)
-#  ApplicationStart:
-#    - location: deploy.sh
-#      timeout: 60
-#      runas: ec2-user
