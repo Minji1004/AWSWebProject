@@ -49,6 +49,10 @@ Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository
            - @Builder: 해당 클래스의 빌더 패턴 클래스를 생성
       
       
-         Repository 클래스: 데이터 저장소에 접근하는 영역. 기존의 DAO로 이해하면 된다.       
+         Repository 클래스: 데이터 저장소에 접근하는 영역. 기존의 DAO로 이해하면 된다.     
+         
+<br>
+Config.auth 폴더 : Spring Security 설정 관련 클래스를 관리하는 폴더
 
+     Entity 폴더 : Entity 클래스와 Entity의 Repository 클래스는 기본적으로 함께 위치해야 한다. 
 
