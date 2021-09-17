@@ -34,7 +34,8 @@ Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository
                        
            - @NoArgsConstructor: 기본 생성자 자동 추가
            - @Builder: 해당 클래스의 빌더 패턴 클래스를 생성
-     
+      
+      
          Repository 클래스: 데이터 저장소에 접근하는 영역. 기존의 DAO로 이해하면 된다.       
 
 
