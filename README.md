@@ -31,6 +31,7 @@ Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository
          Entity 클래스: 도메인 패키지에서 데이터베이스와 맞닿은 핵심 클래스
                        절대 Setter 메소드를 만들지 않는다. 
                        명확히 그 목적과 의도를 나타낼 수 있는 메소드로 추가 Ex) setUserName(X), updateUserName(O) 
+                       <b>비즈니스 처리 로직은 Service가 아니라 Domain인 Entity에서 한다.</b>
                        
            - @NoArgsConstructor: 기본 생성자 자동 추가
            - @Builder: 해당 클래스의 빌더 패턴 클래스를 생성
