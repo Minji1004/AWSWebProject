@@ -68,7 +68,10 @@ Config.auth 폴더 : Spring Security 설정 관련 클래스를 관리하는 폴
     
      LoginUser 클래스: Controller 클래스에서 세션에서 유저 정보를 가져오는 부분을 중복적으로 많이 사용하므로, 어노테이션으로 만듦
                        @LoginUser라는 어노테이션 생성
-                       
+                           
+     LoginUserArgumentResolver 클래스: @LoginUser 어노테이션 기능 구현
+                                      HandlerMethodAr
+                                       
                              
                          
        
