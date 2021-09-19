@@ -95,6 +95,7 @@ Config 폴더: 스프링 설정 관리하는 폴더
 
 ## AWS 연동 및 CI/CD, 무중단 배포 구현                                     
 
+![image](https://user-images.githubusercontent.com/41352652/133917905-a672e2ff-7c6c-46f4-847e-0d7d26ff3f80.png)
 
        
 
