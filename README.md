@@ -53,6 +53,7 @@ Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository
          
 <br>
 Config 폴더: 스프링 설정 관리하는 폴더
+
      auth 폴더 : Spring Security 설정 관련 클래스를 관리하는 폴더
          SecurityConfig 클래스: URL 별 접속 허용, 유저 별 권한 등 설정
                                CustomOAuth2UserService 써서 로그인한 유저 정보 가져옴
