@@ -79,9 +79,13 @@ Config 폴더: 스프링 설정 관리하는 폴더
                                           ex) @GetMapping("/")
                                               public String index(Model model, @LoginUser SessionUser user){...}
                                           HandlerMethodArgumentResolver의 구현체는 Spring에서 인식할 수 있게 
-                                          반드시 WebMVCConfigurer에 추가해야한다.
+                                          반드시 WebMvcConfigurer에 추가해야한다.
                            
-     WebConfig 클래스: 
+     WebConfig 클래스: WebMvcConfigurer의 구현체. LoginUserArgumentResolver를 여기서 등록함. 
+     JPAConfig 클래스: Application 클래스에 있던 @EnableJPAAuditing을 JPACongif클래스로 옮김. 
+                      SpringSecurity 적용 후, Test할 때 Application에 @EnableJPAAuditing이 있으면 @Entity 클래스가 최소 하나 필요한데
+                      @WebMvcTest는 없다보니 에러가 난다. 
+                      
                                        
                              
                          
