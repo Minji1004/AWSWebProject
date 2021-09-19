@@ -88,7 +88,9 @@ Config 폴더: 스프링 설정 관리하는 폴더
                       @WebMvcTest는 없다보니 에러가 난다.
                       따라서 별도로 JPAConfig 클래스를 생성해 @EnableJPAAuditing 어노테이션을 추가한다.
                       
-                                       
+<br>
+<br>
+## AWS 연동 및 CI/CD, 무중단 배포 구현                                     
                              
                          
        
