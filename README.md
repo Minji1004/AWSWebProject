@@ -54,5 +54,22 @@ Domain 폴더 : 데이터베이스와 맞닿은 Domain 영역(Entiry, Repository
 <br>
 Config.auth 폴더 : Spring Security 설정 관련 클래스를 관리하는 폴더
 
-     Entity 폴더 : Entity 클래스와 Entity의 Repository 클래스는 기본적으로 함께 위치해야 한다. 
+     SecurityConfig 클래스: URL 별 접속 허용, 유저 별 권한 등 설정
+                           CustomOAuth2UserService 써서 로그인한 유저 정보 가져옴
+                           
+     CustomOAuth2UserService 클래스: Request에서 User 정보 받은 후, Session에 SessionUser DTO로 유저 정보 세팅
+     
+     Config.auth.dto 폴더: 
+         OAuthAttributes 클래스: 유저의 인증정보를 담음
+         SessionUser 클래스: 유저의 기본정보 담음.
+                             Entity인 User 객체를 놔두고 따로 Session User를 만든 이유는 직렬화 때문이다.
+                             직렬화 대상에 자식 Class까지 포함되면 성능 상에 이슈가 생길 수 있다.
+                             Entity인 User는 직렬화를 구현하지 않고, 직렬화 기능을 가진 SessionUser DTO를 추가로 만든다.
+    
+     LoginUser 클래스: Controller 클래스에서 세션에서 유저 정보를 가져오는 부분을 중복적으로 많이 사용하므로, 어노테이션으로 만듦
+                       @LoginUser라는 어노테이션 생성
+                       
+                             
+                         
+       
 
