@@ -106,7 +106,21 @@ Config 폴더: 스프링 설정 관리하는 폴더
 
 appspec.yml
 - AWS CodeDeploy 설정 파일
-- 배포 쉘 스크립트 실행 (ex., stops.sh, start.
+- 배포 쉘 스크립트 실행 (ex., stops.sh, start.sh)
+
+application.properties
+- DB설정
+- 포트 설정
+- OAuth2의 구글 등록
+- 다른 properties 포함 ex) spring.profiles.include=oauth
+
+application-oauth.properties
+- 구글, 네이버 로그인 연동 설정 파일
+- 민감한 정보라 Git에 안올리고, 로컬과 AWS 서버에만 올림
+- AWS의 deploy.sh에 따로 oauth관련 properites 포함하도록 작성. 
+
+.gitgnore
+- git에 올리지 않을 파일들 작성
 
 
 
