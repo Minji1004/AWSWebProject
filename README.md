@@ -91,12 +91,10 @@ Config 폴더: 스프링 설정 관리하는 폴더
 
 
 
-<br>
-<br>
+
+
 ## AWS 연동 및 CI/CD, 무중단 배포 구현                                     
-<br>
-<br>
-## JAVA 폴더 내 Directory 구조와 설명                             
-                         
+
+
        
 
