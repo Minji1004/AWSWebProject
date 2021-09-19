@@ -75,7 +75,8 @@ Config 폴더: 스프링 설정 관리하는 폴더
                                           구현체가 지정한 값으로 해당 메소드의 파라미터를 넘길 수 있다.      
                                           ex) @GetMapping("/")
                                               public String index(Model model, @LoginUser SessionUser user){...}
-                                          HandlerMethodArgumentResolver의 구현체는 Spring에서 인식할 수 있게 반드시 WebMVCConfigurer에 추가해야한다.
+                                          HandlerMethodArgumentResolver의 구현체는 Spring에서 인식할 수 있게 
+                                          반드시 WebMVCConfigurer에 추가해야한다.
                            
      WebConfig 클래스: 
                                        
