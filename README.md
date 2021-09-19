@@ -71,8 +71,9 @@ Config.auth 폴더 : Spring Security 설정 관련 클래스를 관리하는 폴
                            
      LoginUserArgumentResolver 클래스: @LoginUser 어노테이션 기능 구현
                                       HandlerMethodArgumentResolver 구현체.
-                                      HandelrMethodArgumentResolver는 조건에 맞는 메소드가 있다면 구현체가 지정한 값으로 해당 메소드의 파라미터를 넘길 수 있다.                           
-                                      ![image](https://user-images.githubusercontent.com/41352652/133917032-7fbf2beb-fe6a-4847-9faf-f15a7bc3a6b5.png)
+                                      HandelrMethodArgumentResolver는 조건에 맞는 메소드가 있다면 구현체가 지정한 값으로 해당 메소드의 파라미터를 넘길 수 있다.      
+                                      
+![image](https://user-images.githubusercontent.com/41352652/133917032-7fbf2beb-fe6a-4847-9faf-f15a7bc3a6b5.png)
                                       
 
                                        
