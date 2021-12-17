@@ -11,6 +11,7 @@ import java.util.List;
 //Entity 클래스와 기본 Entity Repository는 함께 위치해야한다!!
 public interface PostsRepository extends JpaRepository<Posts, Long> {
 
-    @Query("Select p From Posts p ORDER BY p.id DESC") //JPA에서 제공하지 않는 것은 이렇게 쿼리로 작성해도 됨
+    //JPA에서 제공하지 않는 것은 이렇게 쿼리로 작성해도 됨
+    @Query("Select p From Posts p ORDER BY p.id DESC")
     List<Posts> findAllDesc();
 }

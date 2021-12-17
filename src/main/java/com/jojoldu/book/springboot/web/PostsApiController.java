@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 //AutoWired 대신 롬복의 @RequiredArgsConstructor가 final이 선언된 모든 필드를 인자값으로 하는 생성자를 생성.
 //Autowired 대신 생성자로 Bean객체(ex. PostsService 를 받아온다.)
 @RequiredArgsConstructor
-//@RestController: JSON을 반환하는 컨트롤러로 만들어준다. 예전에 @ResponseBody를 각 메소드마다 선언했던 것을 한번에 사용할 수 있게 해줌
+//@RestController: JSON을 반환하는 컨트롤러로 만들어준다.
+// //예전에 @ResponseBody를 각 메소드마다 선언했던 것을 한번에 사용할 수 있게 해줌
 @RestController
 public class PostsApiController {
 

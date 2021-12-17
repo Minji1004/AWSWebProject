@@ -1,7 +1,9 @@
 package com.jojoldu.book.springboot.domain;
 
 import lombok.Getter;
+import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -21,4 +23,10 @@ public class BaseTimeEntity {
 
     @LastModifiedDate  //조회한 Entity의 값이 변경될 때 자동으로 시간 저장
     private LocalDateTime modifiedDate;
+
+    @CreatedBy
+    private Long createdId;
+
+    @LastModifiedBy
+    private Long modifiedId;
 }
